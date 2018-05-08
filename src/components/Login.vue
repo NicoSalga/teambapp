@@ -1,13 +1,19 @@
 <template>
-  <div class="hello">
+  <div class="wrapper">
     <h1>Labs Sportsbook Login</h1>
+    <br />
+    <form class="md-layout login-form">
+      <md-field>
+        <label for="username">Username</label>
+        <md-input type="text" id="username" v-model="initial"></md-input>
+      </md-field>
+      <br />
+      <md-field>
+        <label for="password">Password</label>
+        <md-input type="password" id="password" v-model="initial"></md-input>
+      </md-field>
 
-    <form>
-      <label for="username">Username</label>
-      <input type="text" id="username">
-      <label for="password">Password</label>
-      <input type="password" id="password">
-      <button type="submit">Login</button>
+      <md-button class="md-raised login-btn" type="submit">Login</md-button>
     </form>
   </div>
 </template>
@@ -27,5 +33,11 @@ export default {
 <style scoped>
 h1 {
   font-weight: normal;
+}
+.login-form {
+  margin: auto;
+}
+.login-btn {
+  margin:auto;
 }
 </style>
