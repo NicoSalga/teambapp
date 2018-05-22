@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <h1>Labs Sportsbook Login</h1>
+    <h1>Labs Teambapp Login</h1>
     <br />
     <form class="md-layout login-form">
       <md-field>
@@ -23,7 +23,7 @@ export default {
   name: 'Login',
   data() {
     return {
-      msg: 'Welcome to Labs Sportsbook App',
+      msg: 'Welcome to Labs Teambapp App',
     };
   },
 };
