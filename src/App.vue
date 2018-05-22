@@ -12,12 +12,20 @@ export default {
 </script>
 
 <style>
+body {
+  background-color: #eee;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  width: 450px;
   color: #2c3e50;
-  margin-top: 60px;
+  background-color: #fff;
+  margin: 40px auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  box-shadow: 10px 10px 10px #ccc;
 }
 </style>
