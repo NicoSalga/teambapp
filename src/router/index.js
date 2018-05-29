@@ -13,9 +13,9 @@ export default new Router({
       component: Login,
     },
     {
-	path: '/dashboard',
+      path: '/dashboard',
       name: 'Dashboard',
       component: Dashboard,
-    }
+    },
   ],
 });
