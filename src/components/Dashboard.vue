@@ -2,7 +2,6 @@
   <div class="wrapper">
     <h1>Teambapp Dashboard</h1>
     <br />
-    
   </div>
 </template>
 
