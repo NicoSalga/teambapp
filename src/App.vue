@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png" style="width:33%;">
     <router-view/>
   </div>
 </template>
@@ -20,7 +19,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  width: 450px;
+  width: fit-content;
   color: #2c3e50;
   background-color: #fff;
   margin: 40px auto;
