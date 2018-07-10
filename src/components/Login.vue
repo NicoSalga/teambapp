@@ -6,15 +6,19 @@
     <form class="md-layout login-form">
       <md-field>
         <label for="username">Username</label>
-        <md-input type="text" id="username" v-model="initial"></md-input>
+        <md-input type="text" id="username" v-model="username"></md-input>
       </md-field>
       <br />
       <md-field>
         <label for="password">Password</label>
-        <md-input type="password" id="password" v-model="initial"></md-input>
+        <md-input type="password" id="password" v-model="userpass"></md-input>
       </md-field>
 
-      <md-button class="md-raised md-primary login-btn" type="submit">Login</md-button>
+      <md-button
+        class="md-raised md-primary login-btn"
+        type="submit"
+        v-on:click="login"
+      >Login</md-button>
     </form>
   </div>
 </template>
@@ -22,10 +26,16 @@
 <script>
 export default {
   name: 'Login',
-  data() {
-    return {
-      msg: 'Welcome to Labs Teambapp App',
-    };
+  methods: {
+    login() {
+      if (this.isValidLogin(this.username, this.userpass)) {
+        this.$router.push({ name: 'Dashboard' });
+      }
+    },
+    isValidLogin() {
+      // ToDo: real validation
+      return true;
+    },
   },
 };
 </script>
