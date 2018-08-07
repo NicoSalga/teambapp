@@ -7,6 +7,28 @@
 <script>
 export default {
   name: 'App',
+  data() {
+    return {
+      authenticated: false,
+      mockAccount: {
+        username: 'vp',
+        password: 'password'
+      }
+    };
+  },
+  mounted() {
+    if (!this.authenticated) {
+      this.$router.replace({ name: 'Login' });
+    }
+  },
+  methods: {
+    setAuthenticated(status) {
+      this.authenticated = status;
+    },
+    logout() {
+      this.authenticated = false;
+    },
+  },
 };
 </script>
 

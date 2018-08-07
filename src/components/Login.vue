@@ -6,12 +6,12 @@
     <form class="md-layout login-form">
       <md-field>
         <label for="username">Username</label>
-        <md-input type="text" id="username" v-model="username"></md-input>
+        <md-input type="text" id="username" v-model="input.username"></md-input>
       </md-field>
       <br />
       <md-field>
         <label for="password">Password</label>
-        <md-input type="password" id="password" v-model="userpass"></md-input>
+        <md-input type="password" id="password" v-model="input.userpass"></md-input>
       </md-field>
 
       <md-button
@@ -24,17 +24,28 @@
 </template>
 
 <script>
+import auth from '../services/auth';
+
 export default {
   name: 'Login',
+  data() {
+    return {
+      input: {
+        username: '',
+        userpass: '',
+      },
+    };
+  },
   methods: {
     login() {
-      if (this.isValidLogin(this.username, this.userpass)) {
-        this.$router.push({ name: 'Dashboard' });
-      }
-    },
-    isValidLogin() {
-      // ToDo: real validation
-      return true;
+      auth.login(this.input.username, this.input.userpass, (loggedIn) => {
+        if (!loggedIn) {
+          this.error = true;
+          alert('The username and / or password is incorrect');
+        } else {
+          this.$router.push({ name: 'Dashboard' });
+        }
+      });
     },
   },
 };
@@ -54,6 +65,6 @@ h1 {
   margin: auto;
 }
 .login-btn {
-  margin:auto;
+  margin: auto;
 }
 </style>
