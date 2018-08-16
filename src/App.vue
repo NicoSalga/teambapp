@@ -12,8 +12,8 @@ export default {
       authenticated: false,
       mockAccount: {
         username: 'vp',
-        password: 'password'
-      }
+        password: 'password',
+      },
     };
   },
   mounted() {

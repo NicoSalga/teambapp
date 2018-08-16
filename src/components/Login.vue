@@ -41,7 +41,9 @@ export default {
       auth.login(this.input.username, this.input.userpass, (loggedIn) => {
         if (!loggedIn) {
           this.error = true;
+          /* eslint-disable no-alert */
           alert('The username and / or password is incorrect');
+          /* eslint-enable no-alert */
         } else {
           this.$router.push({ name: 'Dashboard' });
         }

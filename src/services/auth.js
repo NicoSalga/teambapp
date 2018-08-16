@@ -1,8 +1,18 @@
 /* globals localStorage */
 
+function pretendRequest(email, pass, cb) {
+  setTimeout(() => {
+    cb({
+      authenticated: true,
+      token: Math.random()
+        .toString(36)
+        .substring(7),
+    });
+  }, 0);
+}
+
 export default {
   login(email, pass, cb) {
-    cb = arguments[arguments.length - 1];
     if (localStorage.token) {
       if (cb) cb(true);
       this.onChange(true);
@@ -37,14 +47,3 @@ export default {
 
   onChange() {},
 };
-
-function pretendRequest(email, pass, cb) {
-  setTimeout(() => {
-    cb({
-      authenticated: true,
-      token: Math.random()
-        .toString(36)
-        .substring(7),
-    });
-  }, 0);
-}
