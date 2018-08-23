@@ -1,20 +1,21 @@
 <template>
   <div class="wrapper">
-    <h1>Teambapp Dashboard</h1>
+    <h1>My Challenges</h1>
     <br />
     <AppNav></AppNav>
   </div>
 </template>
 
 <script>
-import AppNav from './AppNav';
+import AppNav from '../components/AppNav';
+import ChallengeCard from '../components/ChallengeCard';
 
 export default {
-  name: 'Dashboard',
-  components: { AppNav },
+  name: 'MyChallenges',
+  components: { AppNav, ChallengeCard },
   data() {
     return {
-      msg: 'Welcome to Labs Dashboard Teambapp App',
+      msg: 'Your Challenges in Teambapp App',
     };
   },
 };

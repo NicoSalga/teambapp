@@ -2,9 +2,9 @@
   <div class="wrapper">
     <div>
       <md-tabs>
-        <md-tab id="tab-home"
+        <!--md-tab id="tab-home"
                 md-label="Home" md-icon="home"
-                to="/dashboard"></md-tab>
+                to="/dashboard"></md-tab-->
         <md-tab id="tab-upcoming-challenges"
                 md-label="Upcoming Challenges" md-icon="today"
                 to="/upcoming"></md-tab>
@@ -13,7 +13,7 @@
                 to="/my-challenges"></md-tab>
         <md-tab id="tab-rankings"
                 md-label="Rankings" md-icon="list_alt"
-                to="/rankings"></md-tab>
+                to="/ranking"></md-tab>
         <md-tab id="tab-profile"
                 md-label="Profile" md-icon="account_circle"
                 to="/profile"></md-tab>

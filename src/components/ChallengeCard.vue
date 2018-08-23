@@ -1,20 +1,18 @@
 <template>
   <div class="wrapper">
-    <h1>User Profile</h1>
+    <h1>Challenge ##</h1>
     <br />
-    <AppNav></AppNav>
   </div>
 </template>
 
 <script>
-import AppNav from './AppNav';
 
 export default {
-  name: 'Profile',
-  components: { AppNav },
+  name: 'ChallengeCard',
+  components: {},
   data() {
     return {
-      msg: 'User Profile Settings',
+      msg: 'Welcome',
     };
   },
 };

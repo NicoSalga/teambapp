@@ -28,3 +28,7 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+Component design via [Vue Material](https://vuematerial.io/)
+
+Folder structure inspired by [itnext](https://itnext.io/how-to-structure-a-vue-js-project-29e4ddc1aeeb)
