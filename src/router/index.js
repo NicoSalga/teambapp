@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Login from '@/views/Login';
-import Dashboard from '@/views/Dashboard';
 import UpcomingChallenges from '@/views/UpcomingChallenges';
 import MyChallenges from '@/views/MyChallenges';
 import Ranking from '@/views/Ranking';
@@ -27,12 +26,6 @@ export default new Router({
       path: '/',
       name: 'Login',
       component: Login,
-    },
-    {
-      path: '/dashboard',
-      name: 'Dashboard',
-      component: Dashboard,
-      beforeEnter: requireAuth,
     },
     {
       path: '/upcoming',

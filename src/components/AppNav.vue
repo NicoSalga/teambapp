@@ -4,22 +4,19 @@
       <md-button v-on:click="AddChallenge" class="md-fab md-primary md-fab-bottom-right">
         <md-icon>add</md-icon>
       </md-button>
-      <md-tabs>
-        <!--md-tab id="tab-home"
-                md-label="Home" md-icon="home"
-                to="/dashboard"></md-tab-->
+      <md-tabs md-sync-route>
         <md-tab id="tab-upcoming-challenges"
-                md-label="Upcoming Challenges" md-icon="today"
-                to="/upcoming"></md-tab>
-        <md-tab id="tab-my-challenges"
-                md-label="My Challenges" md-icon="perm_contact_calendar"
-                to="/my-challenges"></md-tab>
-        <md-tab id="tab-rankings"
-                md-label="Rankings & Stats" md-icon="list_alt"
-                to="/ranking"></md-tab>
+                to="/upcoming"
+                md-label="Upcoming Challenges" md-icon="today"></md-tab>
+        <md-tab id="my-challenges"
+                to="/my-challenges"
+                md-label="My Challenges" md-icon="perm_contact_calendar"></md-tab>
+        <md-tab id="ranking"
+                to="/ranking"
+                md-label="Rankings & Stats" md-icon="list_alt"></md-tab>
         <md-tab id="tab-profile"
-                md-label="Profile" md-icon="account_circle"
-                to="/profile"></md-tab>
+                to="/profile"
+                md-label="Profile" md-icon="account_circle"></md-tab>
       </md-tabs>
       <ModalForm v-bind:showModal="displayModal" v-bind:cancelModal="CancelModal"></ModalForm>
     </div>
@@ -28,6 +25,7 @@
 
 <script>
 import ModalForm from '../components/ModalForm';
+
 export default {
   name: 'AppNav',
   components: { ModalForm },
@@ -46,13 +44,3 @@ export default {
   },
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.wrapper {
-  /*min-width: 900px;*/
-}
-h1 {
-  font-weight: normal;
-}
-</style>

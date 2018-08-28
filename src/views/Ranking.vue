@@ -2,7 +2,7 @@
   <div class="wrapper">
     <SectionTitle title="Ranking & Stats" />
     <br />
-    <AppNav />
+    <AppNav selected="ranking"/>
   </div>
 </template>
 
@@ -20,10 +20,3 @@ export default {
   },
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-  h1 {
-    font-weight: normal;
-  }
-</style>

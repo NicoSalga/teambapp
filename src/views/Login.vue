@@ -45,7 +45,7 @@ export default {
           alert('The username and / or password is incorrect');
           /* eslint-enable no-alert */
         } else {
-          this.$router.push({ name: 'Dashboard' });
+          this.$router.push({ name: 'UpcomingChallenges' });
         }
       });
     },

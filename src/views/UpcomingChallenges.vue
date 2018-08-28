@@ -7,7 +7,6 @@
 </template>
 
 <script>
-
 import SectionTitle from '../components/SectionTitle';
 import AppNav from '../components/AppNav';
 import ChallengeCard from '../components/ChallengeCard';
@@ -22,13 +21,3 @@ export default {
   },
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.wrapper {
-  /*min-width: 900px;*/
-}
-h1 {
-  font-weight: normal;
-}
-</style>
