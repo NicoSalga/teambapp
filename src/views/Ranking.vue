@@ -1,17 +1,18 @@
 <template>
   <div class="wrapper">
-    <h1>Teambapp Ranking</h1>
+    <SectionTitle title="Ranking & Stats" />
     <br />
-    <AppNav></AppNav>
+    <AppNav />
   </div>
 </template>
 
 <script>
+import SectionTitle from '../components/SectionTitle';
 import AppNav from '../components/AppNav';
 
 export default {
   name: 'Ranking',
-  components: { AppNav },
+  components: { SectionTitle, AppNav },
   data() {
     return {
       msg: 'Teambapp Ranking',
@@ -22,10 +23,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.wrapper {
-  /*min-width: 900px;*/
-}
-h1 {
-  font-weight: normal;
-}
+  h1 {
+    font-weight: normal;
+  }
 </style>

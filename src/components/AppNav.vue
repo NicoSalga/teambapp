@@ -12,7 +12,7 @@
                 md-label="My Challenges" md-icon="perm_contact_calendar"
                 to="/my-challenges"></md-tab>
         <md-tab id="tab-rankings"
-                md-label="Rankings" md-icon="list_alt"
+                md-label="Rankings & Stats" md-icon="list_alt"
                 to="/ranking"></md-tab>
         <md-tab id="tab-profile"
                 md-label="Profile" md-icon="account_circle"

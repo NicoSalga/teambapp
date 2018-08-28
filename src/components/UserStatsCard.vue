@@ -1,21 +1,17 @@
 <template>
   <div class="wrapper">
-    <SectionTitle title="Teambapp Dashboard" />
-    <br />
-    <AppNav></AppNav>
+    user stats soon...
   </div>
 </template>
 
 <script>
-import SectionTitle from '../components/SectionTitle';
-import AppNav from '../components/AppNav';
 
 export default {
-  name: 'Dashboard',
-  components: { SectionTitle, AppNav },
+  name: 'UserStatsCard',
+  components: {},
   data() {
     return {
-      msg: 'Welcome to Labs Dashboard Teambapp App',
+      msg: 'Welcome',
     };
   },
 };

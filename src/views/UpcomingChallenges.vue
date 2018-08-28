@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <h1>Upcoming Challenges</h1>
+    <SectionTitle title="Upcoming Challenges" />
     <br />
     <AppNav></AppNav>
   </div>
@@ -8,12 +8,13 @@
 
 <script>
 
+import SectionTitle from '../components/SectionTitle';
 import AppNav from '../components/AppNav';
 import ChallengeCard from '../components/ChallengeCard';
 
 export default {
   name: 'UpcomingChallenges',
-  components: { AppNav, ChallengeCard },
+  components: { SectionTitle, AppNav, ChallengeCard },
   data() {
     return {
       msg: 'Upcoming Challenges in Teambapp',
