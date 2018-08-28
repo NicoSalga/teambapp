@@ -1,6 +1,9 @@
 <template>
   <div class="wrapper">
     <div>
+      <md-button v-on:click="AddChallenge" class="md-fab md-primary md-fab-bottom-right">
+        <md-icon>add</md-icon>
+      </md-button>
       <md-tabs>
         <!--md-tab id="tab-home"
                 md-label="Home" md-icon="home"
@@ -18,13 +21,29 @@
                 md-label="Profile" md-icon="account_circle"
                 to="/profile"></md-tab>
       </md-tabs>
+      <ModalForm v-bind:showModal="displayModal" v-bind:cancelModal="CancelModal"></ModalForm>
     </div>
   </div>
 </template>
 
 <script>
+import ModalForm from '../components/ModalForm';
 export default {
   name: 'AppNav',
+  components: { ModalForm },
+  data() {
+    return {
+      displayModal: false,
+    };
+  },
+  methods: {
+    AddChallenge() {
+      this.displayModal = true;
+    },
+    CancelModal() {
+      this.displayModal = false;
+    },
+  },
 };
 </script>
 
