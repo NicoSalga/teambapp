@@ -44,7 +44,7 @@ body {
   width: fit-content;
   color: #2c3e50;
   background-color: #fff;
-  margin: 40px auto;
+  margin: auto;
   padding: 30px;
   border: 1px solid #ccc;
   box-shadow: 10px 10px 10px #ccc;
