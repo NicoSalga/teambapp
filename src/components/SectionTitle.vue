@@ -24,5 +24,6 @@ export default {
     margin: 0;
     line-height: 1;
     font-size: 21px;
+    font-family: Roboto, sans-serif;
   }
 </style>
