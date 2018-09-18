@@ -67,6 +67,7 @@ export default {
     font-size: 20px;
     font-weight: bold;
     background-color: aliceblue;
+    letter-spacing: 5px;
     margin-top: 0px !important;
   }
   .challenge-date {
