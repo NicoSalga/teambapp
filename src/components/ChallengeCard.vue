@@ -14,16 +14,20 @@
           <md-avatar class="md-large">
             <img v-bind:src="data.challenger.avatarURL" alt="Challenger">
           </md-avatar>
-          <div>{{ data.challenger.firstname }} {{ data.challenger.lastname }}</div>
+          <div class="player-name">
+            {{ data.challenger.firstname }} {{ data.challenger.lastname }}
+          </div>
         </div>
         <div class="versus md-layout-item md-size-10">
-          <span>VS</span>
+          <span>VS.</span>
         </div>
         <div class="md-large md-layout-item md-size-45">
           <md-avatar class="md-large">
             <img :src="data.challenged.avatarURL" alt="Challenged">
           </md-avatar>
-          <div>{{ data.challenged.firstname }} {{ data.challenged.lastname }}</div>
+          <div class="player-name">
+            {{ data.challenged.firstname }} {{ data.challenged.lastname }}
+          </div>
         </div>
       </md-card-content>
 
@@ -73,9 +77,10 @@ export default {
   .challenge-date {
     background-color: #add8cf;
     line-height: 2;
+    font-size: 16px;
   }
   .md-card-content {
-    padding: 16px 0;
+    padding: 12px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,6 +95,10 @@ export default {
     font-weight: bold;
     font-style: italic;
     color: #757575;
+  }
+  .player-name {
+    font-weight: bold;
+    color: darkslategray;
   }
   .md-card-actions {
     padding: 0;
