@@ -8,6 +8,7 @@
     <v-toolbar-title class="ml-0 pl-3">
       <v-toolbar-side-icon @click.stop="handleDrawerToggle"></v-toolbar-side-icon>
     </v-toolbar-title>
+      <!-- Search Box
       <v-text-field
         flat
         solo-inverted
@@ -16,16 +17,15 @@
         class="hidden-sm-and-down"
         >
       </v-text-field>
+      -->
       <v-spacer></v-spacer>
-      <v-btn href="mailto:wangqiangshen@gmail.com">
-        Hire Me
-      </v-btn>      
-      <v-btn icon href="https://github.com/tookit/vue-material-admin">
+      <v-btn icon href="https://github.com/velocitypa/teambapp.git">
         <v-icon>fa fa-github</v-icon>
       </v-btn>
       <v-btn icon @click="handleFullScreen()">
         <v-icon>fullscreen</v-icon>
       </v-btn>
+      <!-- Notifications Badge
       <v-menu offset-y origin="center center" class="elelvation-1" :nudge-bottom="14" transition="scale-transition">
         <v-btn icon flat slot="activator">
         <v-badge color="red" overlap>
@@ -35,10 +35,12 @@
         </v-btn>
         <notification-list></notification-list>
       </v-menu>
+      -->
       <v-menu offset-y origin="center center" :nudge-bottom="10" transition="scale-transition">
         <v-btn icon large flat slot="activator">
           <v-avatar size="30px">
-            <img src="/static/avatar/man_4.jpg" alt="Michael Wang"/>
+            <!-- TODO: Use user profile data -->
+            <img src="//loremflickr.com/30/30/face" alt="TODO: User name here"/>
           </v-avatar>
         </v-btn>
         <v-list class="pa-0">
@@ -72,14 +74,15 @@ export default {
           console.log(e);
         }
       },
-      {
-        icon: 'settings',
-        href: '#',
-        title: 'Settings',
-        click: (e) => {
-          console.log(e);
-        }
-      },
+      // Hide Settings link from profile menu
+      // {
+      //   icon: 'settings',
+      //   href: '#',
+      //   title: 'Settings',
+      //   click: (e) => {
+      //     console.log(e);
+      //   }
+      // },
       {
         icon: 'fullscreen_exit',
         href: '#',

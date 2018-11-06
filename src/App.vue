@@ -9,12 +9,10 @@
           <page-header v-if="$route.meta.breadcrumb"></page-header>
           <div class="page-wrapper">
             <router-view></router-view>
-          </div>   
+          </div>
            <!-- App Footer -->
           <v-footer height="auto" class="white pa-3 app--footer">
-            <span class="caption">isocked.com Design &copy; {{ new Date().getFullYear() }}</span>
-            <v-spacer></v-spacer>
-            <span class="caption mr-1"> Make With Love </span> <v-icon color="pink" small>favorite</v-icon>
+            <span class="caption">from Buenos Aires Frontend Community {{ new Date().getFullYear() }}</span>
           </v-footer>
         </v-content>
         <!-- Go to top -->
@@ -32,7 +30,7 @@
           fixed
           >
           <theme-settings></theme-settings>
-        </v-navigation-drawer>        
+        </v-navigation-drawer>
       </v-app>
     </template>
     <template v-else>
@@ -50,10 +48,10 @@
       v-model="snackbar.show"
     >
       {{ snackbar.text }}
-      <v-btn dark flat @click.native="snackbar.show = false" icon> 
+      <v-btn dark flat @click.native="snackbar.show = false" icon>
         <v-icon>close</v-icon>
       </v-btn>
-    </v-snackbar>    
+    </v-snackbar>
   </div>
 </template>
 <script>
@@ -104,11 +102,11 @@ export default {
 
 
 <style lang="stylus" scoped>
-  .setting-fab 
-    top:50%!important; 
+  .setting-fab
+    top:50%!important;
     right:0;
-    border-radius:0  
+    border-radius:0
   .page-wrapper
-    min-height:calc(100vh - 64px - 50px - 81px );  
+    min-height:calc(100vh - 64px - 50px - 81px );
 
 </style>
