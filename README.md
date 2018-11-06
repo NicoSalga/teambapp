@@ -1,15 +1,9 @@
-# Vue Material Admin
+# Challenger (previously TeambApp)
 
 ### Introduction
-Vue Material Admin Template is a [Vue](https://vuejs.org/index.html/) Based Material Design Admin Template.
-And use [Vuetifyjs](https://vuetifyjs.com/) as base framework.
-Vuetify is Awesome.
+Challenger started out as an app built with [Vue](https://vuejs.org/index.html/) + [Material Design](https://vuejs.org/index.html/) designed to create multidisciplinary challenges and follow up on their outcomes and rankings, with a social component.
+ Since we were lacking a designer in the team, we decided to go with [Vue Material Admin Template](https://github.com/tookit/vue-material-admin/) - with [Vuetifyjs](https://vuetifyjs.com/) as base framework -  for presentation.
 
-### Demo
-[http://vma.isocked.com/#/dashboard](http://vma.isocked.com/#/dashboard) 
-
-### Preview
-![Preivew](http://vma.isocked.com//static/preview/01_preview.png)
 
 ###
 ### Project Structure
@@ -73,16 +67,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 * [ECharts](http://echarts.baidu.com/option.html)
 * [Stylus](http://stylus-lang.com/)
 
-### Donate
-If you find this project useful, you can buy author a glass of juice :tropical_drink:
-
-
-[Paypal Me](https://www.paypal.me/tookit)
-
-[Buy me a coffee](https://www.buymeacoffee.com/tookit)
-
-<a href="https://www.buymeacoffee.com/tookit" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
-
 ## License
 
 [MIT](https://github.com/tookit/vue-material-admin/blob/master/LICENSE)
+
+
