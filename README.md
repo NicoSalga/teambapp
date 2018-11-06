@@ -1,8 +1,9 @@
 # Challenger (previously TeambApp)
 
-### Introduction
-Challenger started out as an app built with [Vue](https://vuejs.org/index.html/) + [Material Design](https://vuejs.org/index.html/) designed to create multidisciplinary challenges and follow up on their outcomes and rankings, with a social component.
- Since we were lacking a designer in the team, we decided to go with [Vue Material Admin Template](https://github.com/tookit/vue-material-admin/) - with [Vuetifyjs](https://vuetifyjs.com/) as base framework -  for presentation.
+## Introduction
+Challenger started out as an app built with [Vue](https://vuejs.org/index.html/) + [Material Design](https://vuematerial.io/) aimed to enabling the creation of multidisciplinary game challenges and the ability to follow up on their outcomes and user rankings, with a strong social component.
+
+Since we were lacking a designer in the team, we decided to go with [Vue Material Admin Template](https://github.com/tookit/vue-material-admin/) - with [Vuetifyjs](https://vuetifyjs.com/) as base framework -  for our presentation layer.
 
 
 ###
@@ -60,14 +61,14 @@ npm test
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-### Reference
+### Admin Template Reference
 
 * [Vuetifyjs](https://vuetifyjs.com/)
 * [Vue](https://vuejs.org/index.html/)
 * [ECharts](http://echarts.baidu.com/option.html)
 * [Stylus](http://stylus-lang.com/)
 
-## License
+### Admin Template License
 
 [MIT](https://github.com/tookit/vue-material-admin/blob/master/LICENSE)
 
