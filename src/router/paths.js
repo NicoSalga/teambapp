@@ -62,8 +62,38 @@ export default [
     meta: { },
     name: 'Root',
     redirect: {
-      name: 'Dashboard'
+      name: 'UpcomingChallenges'
     }
+  },
+  {
+    path: '/upcoming',
+    meta: { breadcrumb: true },
+    name: 'UpcomingChallenges',
+    component: () => import(
+      /* webpackChunkName: "routes" */
+      /* webpackMode: "lazy-once" */
+      `@/pages/UpcomingChallenges.vue`
+    )
+  },
+  {
+    path: '/my-challenges',
+    meta: { breadcrumb: true },
+    name: 'MyChallenges',
+    component: () => import(
+      /* webpackChunkName: "routes" */
+      /* webpackMode: "lazy-once" */
+      `@/pages/MyChallenges.vue`
+    )
+  },
+  {
+    path: '/rankings',
+    meta: { breadcrumb: true },
+    name: 'Rankings',
+    component: () => import(
+      /* webpackChunkName: "routes" */
+      /* webpackMode: "lazy-once" */
+      `@/pages/Rankings.vue`
+    )
   },
   {
     path: '/dashboard',
