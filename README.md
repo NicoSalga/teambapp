@@ -61,15 +61,17 @@ npm test
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-### Admin Template Reference
+#### Admin Template Reference
 
 * [Vuetifyjs](https://vuetifyjs.com/)
 * [Vue](https://vuejs.org/index.html/)
 * [ECharts](http://echarts.baidu.com/option.html)
 * [Stylus](http://stylus-lang.com/)
 
-### Admin Template License
+##### Admin Template License
 
 [MIT](https://github.com/tookit/vue-material-admin/blob/master/LICENSE)
 
 
+#### Other References
+* [Vue-Moment](https://www.npmjs.com/package/vue-moment)

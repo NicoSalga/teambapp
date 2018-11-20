@@ -1,30 +1,32 @@
 <template>
-    <v-flex lg8 sm12 xs12>
+    <v-flex lg6 sm12 xs12>
         <v-widget :title="data.discipline" content-bg="white">
             <v-btn icon slot="widget-header-action">
                 <v-icon class="text--secondary">refresh</v-icon>
             </v-btn>
             <div slot="widget-content">
                 <div class="md-subhead challenge-date">{{ data.dateTime | moment("calendar") }}</div>
-                <v-flex lg5 sm5 xs12>
-                    <v-avatar>
-                        <img v-bind:src="data.challenger.avatarURL" alt="Challenger">
-                    </v-avatar>
-                    <div class="player-name">
-                        {{ data.challenger.firstname }} {{ data.challenger.lastname }}
-                    </div>
-                </v-flex>
-                <v-flex lg2 sm2 xs12>
-                    <span>VS.</span>
-                </v-flex>
-                <v-flex lg5 sm5 xs12>
-                    <v-avatar>
-                        <img v-bind:src="data.challenged.avatarURL" alt="Challenger">
-                    </v-avatar>
-                    <div class="player-name">
-                        {{ data.challenged.firstname }} {{ data.challenged.lastname }}
-                    </div>
-                </v-flex>
+                <v-layout row wrap>
+                    <v-flex lg5 sm5 xs12 class="center-content">
+                        <v-avatar lg12 sm12 xs12 :size="avatarSize">
+                            <img v-bind:src="data.challenger.avatarURL" alt="Challenger">
+                        </v-avatar>
+                        <div lg12 sm12 xs12 class="player-name">
+                            {{ data.challenger.firstname }} {{ data.challenger.lastname }}
+                        </div>
+                    </v-flex>
+                    <v-flex lg2 sm2 xs12 class="center-content">
+                        <span class="versus">VS.</span>
+                    </v-flex>
+                    <v-flex lg5 sm5 xs12 class="center-content">
+                        <v-avatar lg12 sm12 xs12 :size="avatarSize">
+                            <img v-bind:src="data.challenged.avatarURL" alt="Challenger">
+                        </v-avatar>
+                        <div lg12 sm12 xs12 class="player-name">
+                            {{ data.challenged.firstname }} {{ data.challenged.lastname }}
+                        </div>
+                    </v-flex>
+                </v-layout>
             </div>
         </v-widget>
     </v-flex>
@@ -49,73 +51,49 @@
 </template>
 
 <script>
-    export default {
-        name: 'ChallengeCard',
-        components: {},
-        props: ['data'],
-        data() {
-            return {};
-        },
+import VWidget from '@/components/VWidget';
+
+export default {
+  name: 'ChallengeCard',
+  components: {
+    VWidget,
+  },
+  props: ['data'],
+  data () {
+    return {
+      avatarSize: 128,
     };
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .challenge-card-wrapper {
-        margin: 9px;
-    }
-    .md-card-header {
-        padding: 0;
-    }
-    .md-title {
-        text-transform: uppercase;
-        font-size: 20px;
-        font-weight: bold;
-        background-color: aliceblue;
-        letter-spacing: 5px;
-        margin-top: 0px !important;
-    }
-    .challenge-date {
-        background-color: #add8cf;
-        line-height: 2;
-        font-size: 16px;
-    }
-    .md-card-content {
-        padding: 12px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .md-avatar.md-large {
-        min-width: 90px;
-        min-height: 90px;
-        background-color: #e1e1e1;
-    }
     .versus {
-        font-size: 22px;
-        font-weight: bold;
+        font-size: 28px;
         font-style: italic;
-        color: #757575;
+        color: black;
+        vertical-align: middle;
+        font-weight: 100;
+        margin: 0;
+        line-height: 5;
+        font-family: Roboto, sans-serif;
     }
+
     .player-name {
         font-weight: bold;
         color: darkslategray;
     }
-    .md-card-actions {
-        padding: 0;
+
+    .challenge-date {
+        background-color: #dceeff;
+        line-height: 2;
+        font-size: 16px;
+        margin: -16px;
+        margin-bottom: 0px;
+        padding-left: 24px;
     }
-    .md-card-actions .md-button {
-        margin: 0px;
-        background: #448aff;
-        color: white;
-        width: 99%;
-    }
-    span {
-        vertical-align: middle;
-        font-weight: normal;
-        margin: 0;
-        line-height: 1;
-        font-size: 21px;
-        font-family: Roboto, sans-serif;
+    .center-content {
+        text-align: center;
     }
 </style>

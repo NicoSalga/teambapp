@@ -41,65 +41,14 @@
           </mini-statistic>
         </v-flex>
         < !-- mini statistic  end -->
-        <v-flex lg8 sm12 xs12>
-          <v-widget title="Site Traffic" content-bg="white">
-            <v-btn icon slot="widget-header-action">
-              <v-icon class="text--secondary">refresh</v-icon>
-            </v-btn>
-            <div slot="widget-content">
+        <ChallengeCard :data="challenge"></ChallengeCard>
 
+        <v-flex lg4 sm12 xs12>
+          <v-widget title="Focused Ranking" content-bg="white">
+            <div slot="widget-content">
+                Coming soon...
             </div>
           </v-widget>
-        </v-flex>
-
-        <v-flex lg4 sm12 xs12>
-          <v-widget title="Top Location" content-bg="white">
-            <div slot="widget-content">
-                hola mundo!
-            </div>
-          </v-widget>
-        </v-flex>
-        <!-- social/weather card start -->
-        <v-flex lg4 sm12 xs12>
-          <profile-card>
-          </profile-card>
-        </v-flex>
-        <v-flex lg4 sm12 xs12>
-          <box-chart
-            card-color="indigo"
-            title="Trending"
-            sub-title="10%"
-            icon="trending_up"
-            :data="siteTrafficData"
-            :chart-color="[color.indigo.lighten1]"
-            type="line"
-          >
-          </box-chart>
-
-        </v-flex>
-        <!-- statistic section -->
-        <v-flex lg4 sm12 xs12>
-          <linear-statistic
-            title="Sales"
-            sub-title="Sales increase"
-            icon="trending_up"
-            color="success"
-            :value="15"
-          >
-          </linear-statistic>
-
-        </v-flex>
-        <!-- Circle statistic -->
-        <v-flex lg4 sm12 xs12 v-for="(item,index) in trending" :key="'c-trending'+index">
-          <circle-statistic
-            :title="item.subheading"
-            :sub-title="item.headline"
-            :caption="item.caption"
-            :icon="item.icon.label"
-            :color="item.linear.color"
-            :value="item.linear.value"
-          >
-          </circle-statistic>
         </v-flex>
         <!-- acitivity/chat widget -->
         <v-flex lg6 sm12 xs12>
@@ -151,8 +100,28 @@ import BoxChart from '@/components/widgets/chart/BoxChart';
 import ChatWindow from '@/components/chat/ChatWindow';
 import CircleStatistic from '@/components/widgets/statistic/CircleStatistic';
 import LinearStatistic from '@/components/widgets/statistic/LinearStatistic';
+import ChallengeCard from './ui/ChallengeCard';
+
+const challengeMock = {
+  discipline: 'Ping Pong',
+  dateTime: new Date(),
+  challenger: {
+    firstname: 'Martin',
+    lastname: 'Baez',
+    avatarURL: require('../../static/people/endavans/mbaez.png'), // eslint-disable-line
+  },
+  challengerVotes: 4,
+  challenged: {
+    firstname: 'Adrian',
+    lastname: 'Gay Cattaneo',
+    avatarURL: require('../../static/people/endavans/adrian.png'), // eslint-disable-line
+  },
+  challengedVotes: 5,
+};
+
 export default {
   components: {
+    ChallengeCard,
     VWidget,
     MiniStatistic,
     ChatWindow,
@@ -171,6 +140,7 @@ export default {
   data: () => ({
     color: Material,
     selectedTab: 'tab-1',
+    challenge: challengeMock,
     linearTrending: [
       {
         subheading: 'Sales',

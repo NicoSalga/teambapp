@@ -3,6 +3,7 @@
 import Vue from 'vue';
 import App from './App';
 import Vuetify from 'vuetify';
+import VueMoment from 'vue-moment';
 import router from './router';
 import 'font-awesome/css/font-awesome.css';  
 import './theme/default.styl';
@@ -34,6 +35,7 @@ Vue.use(Vuetify, {
     }
   }
 });
+Vue.use(VueMoment, {});
 // Bootstrap application components
 
 
